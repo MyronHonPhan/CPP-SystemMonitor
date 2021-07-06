@@ -17,16 +17,16 @@ string Format::ElapsedTime(long seconds) {
   
   h_string = std::to_string(hours);
   
-  if (minutes > 10) {
+  if (minutes >= 10) {
     m_string = std::to_string(minutes);
   }
-  else if (minutes >= 0 && minutes <= 10) {
+  else if (minutes >= 0 && minutes < 10) {
     m_string = '0' + std::to_string(minutes); 
   }
-  if (seconds > 10) {
+  if (seconds >= 10) {
     s_string = std::to_string(seconds);
   }
-  else if (seconds >= 0 && seconds <= 10) {
+  else if (seconds >= 0 && seconds < 10) {
     s_string = '0' + std::to_string(seconds); 
   }
   
